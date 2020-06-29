@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EditAssignment">
+
+    <TextView
+        android:id="@+id/titleEditAssignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Assignment"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editAssignmentNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Assignment Name"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTypeText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleEditAssignment"
+        android:paddingTop="40dp"/>
+
+    <EditText
+        android:id="@+id/editTypeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Type"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:paddingTop="25dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editPriorityText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editAssignmentNameText"
+        />
+
+    <EditText
+        android:id="@+id/editPriorityText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:hint="Priority"
+        android:inputType="textPersonName"
+        android:paddingTop="25dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editDueDateText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTypeText" />
+
+    <EditText
+        android:id="@+id/editDueDateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:hint="Due Date"
+        android:inputType="textPersonName"
+        android:paddingTop="25dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editNotesText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editPriorityText" />
+
+
+
+    <EditText
+        android:id="@+id/editNotesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Notes"
+        android:inputType="textPersonName"
+        android:paddingTop="25dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkCompleted"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editDueDateText" />
+
+
+
+        <CheckBox
+        android:id="@+id/checkCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completed"
+        app:layout_constraintTop_toBottomOf="@id/editNotesText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editButton"
+            android:layout_marginTop="25dp"
+        />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        app:layout_constraintTop_toBottomOf="@id/checkCompleted"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="25dp"
+         />
+
+
+    <TextView
+        android:id="@+id/editIdText"
+        android:layout_width="163dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="84dp"
+        android:text="ID"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAssignmentNameText"
+        android:paddingTop="25dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Workload Planning Tool</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="days_until_text">Days</string>
+    <string name="tomorrow_text">Tomorrow</string>
+    <string name="today_text">Today</string>
+
+</resources>

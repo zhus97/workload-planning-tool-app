@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddAssignment">
+
+    <TextView
+        android:id="@+id/titleAddAssignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Assignment"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/assignmentNameTextView"
+         />
+
+    <EditText
+        android:id="@+id/assignmentNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Assignment Name"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/titleAddAssignment"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/typeText"
+        android:paddingTop="40dp"
+        />
+
+
+    <EditText
+        android:id="@+id/typeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:focusableInTouchMode="false"
+        android:hint="Type"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/assignmentNameText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/priorityText"
+        android:paddingTop="25dp"
+        />
+
+    <EditText
+        android:id="@+id/priorityText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:focusableInTouchMode="false"
+        android:hint="Priority"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/typeText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dueDateText"
+        android:paddingTop="25dp"
+         />
+
+    <EditText
+        android:id="@+id/dueDateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Due Date"
+        android:focusableInTouchMode="false"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/priorityText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/notesText"
+        android:paddingTop="25dp"
+        />
+
+    <EditText
+        android:id="@+id/notesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Notes"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/dueDateText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/checkCompleted"
+        android:paddingTop="25dp"
+         />
+
+
+    <CheckBox
+        android:id="@+id/checkCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/notesText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/reminderSwitch"
+        android:layout_marginTop="9dp"
+        android:text="Completed" />
+
+    <Switch
+        android:id="@+id/reminderSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set reminder"
+        app:layout_constraintTop_toBottomOf="@+id/checkCompleted"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/setReminderButton"
+        android:paddingTop="25dp"
+        />
+
+
+    <Button
+        android:id="@+id/setReminderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reminderSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/reminderSwitch"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/doneButton"
+        android:text="Set Reminder"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setReminderButton"
+        app:layout_constraintTop_toBottomOf="@+id/setReminderButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        android:text="Done" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:defaultFocusHighlightEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeText"
+        app:layout_constraintVertical_bias="0.995"
+        app:menu="@menu/bottom_navigation" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

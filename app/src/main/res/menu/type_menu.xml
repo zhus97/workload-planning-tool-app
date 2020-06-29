@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/typeGeneral"
+        android:title="General"
+        android:checked="true" />
+    <item android:id="@+id/typeAssessment"
+        android:title="Assessment" />
+    <item android:id="@+id/typeCoursework"
+        android:title="Coursework" />
+    <item android:id="@+id/typeExam"
+        android:title="Exam" />
+    <item android:id="@+id/typeOther"
+        android:title="Other" />
+</menu>
+
